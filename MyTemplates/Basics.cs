@@ -22,6 +22,90 @@ namespace MyTemplates
             double largeDecimalNumber = 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999D;
         }
 
+        public void Comparators()
+        {
+            int var1 = 0;
+            int var2 = 1;
+
+            // Greater than
+            if (var2 > var1)
+            {
+
+            }
+
+            // Greater than or equal to
+            if (var2 >= var1)
+            {
+
+            }
+
+            // Less than
+            if (var1 < var2)
+            {
+
+            }
+
+            // Less than or equal to
+            if (var1 <= var2)
+            {
+
+            }
+
+            // Equal to
+            if (var1 == var2)
+            {
+
+            }
+
+            // Not equal to
+            if (var1 != var2)
+            {
+
+            }
+
+            if(true == false)
+            {
+
+            }
+            else if(true == true)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        public void Math()
+        {
+            // All equal to 4
+
+            // Add
+            int sum = 3 + 1;
+
+            // Subtract
+            int difference = 5 - 1;
+
+            // Multiply
+            int product = 2 * 2;
+
+            // Divide
+            int quotent = 8 / 2;
+
+            // Modulus (Remainder)
+            int modulus = 9 % 5;
+
+            // Exponent
+            int exponent = 2 ^ 2;
+
+            // Absolute Value
+            float positive = MathF.Abs(-6);
+
+            // Square Root
+            float root = MathF.Sqrt(36);
+        }
+
         public void Loops()
         {
             for(int i = 0; i < 10; i++)
@@ -51,50 +135,47 @@ namespace MyTemplates
 
             }
         }
+    }
 
-        public void Comparators()
+    public class Parent
+    {
+        // Constructor
+        // Can have multiple depending on if it has arguments
+        public Parent()
         {
-            int var1 = 0;
-            int var2 = 1;
-
-            // Greater than
-            if (var1 > var2)
-            {
-                
-            }
-
-            // Greater than or equal to
-            if (var1 >= var2)
-            {
-
-            }
-
-            // Less than
-            if (var1 < var2)
-            {
-
-            }
-
-            // Less than or equal to
-            if (var1 <= var2)
-            {
-
-            }
-
-            // Equal to
-            if (var1 == var2)
-            {
-
-            }
-
-            // Not equal to
-            if (var1 != var2)
-            {
-
-            }
+            
         }
 
+        public Parent(string lastName)
+        {
+            LastName = lastName;
+        }
 
+        // Properties
+        public string LastName { get; set; }
 
+        // Can only be changed by parent(class it resides in)
+        public List<Child> Children { get; private set;}
+
+        // Can only be changed by family of class (residing class and offspring)
+        public string NetflixPassword { get; protected set; }
     }
+
+    public class Child : Parent
+    {
+        // Own unique contructor
+        public Child()
+        {
+            LastName = "Albright";
+            NetflixPassword = "thgirblA";
+        }
+
+        // Shares Parents constructor
+        public Child(string lastName) : base(lastName)
+        {
+            NetflixPassword = "8675309";
+        }
+    }
+
+    
 }

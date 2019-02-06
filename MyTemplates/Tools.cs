@@ -39,7 +39,7 @@ namespace MyTemplates
             return whichKind;
         }
 
-        static int NumberCheck()
+        public int NumberCheck()
         {
             bool error;
             int definitelyNumber;
@@ -56,6 +56,24 @@ namespace MyTemplates
             } while (error);
 
             return definitelyNumber;
+        }
+
+        public void SaveToFile(string text)
+        {
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Alex\Desktop\test.txt"))
+            {
+                file.WriteLine(text);
+            }
+        }
+
+        public string LoadFromFile()
+        {
+            using (System.IO.StreamReader file = new System.IO.StreamReader(@"C:\Users\Alex\Desktop\test.txt"))
+            {
+                string text = file.ReadLine();
+
+                return text;
+            }
         }
     }
 }

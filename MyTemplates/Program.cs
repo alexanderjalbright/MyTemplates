@@ -7,6 +7,8 @@ namespace MyTemplates
     {
         static void Main(string[] args)
         {
+            Child kid = new Child("Albright");
+            Console.WriteLine(kid.NetflixPassword);
             
         }
 
