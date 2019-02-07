@@ -137,6 +137,21 @@ namespace MyTemplates
         }
     }
 
+    public class Enumerables
+    {
+        // Arrays
+        string[] array = new string[4];
+        string[] initializedArray = new string[] { "We", "Can", "Code", "IT" };
+
+        // Lists
+        List<string> list = new List<string>() { "We", "Can", "Code", "IT" };
+
+        // Dictionary
+        Dictionary<int, string> dictionary = new Dictionary<int, string>() { { 1, "We" }, { 1, "Can" }, { 1, "Code" }, { 1, "IT" } };
+        
+    }
+
+
     public class Parent
     {
         // Constructor
