@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyTemplates
 {
-    public class Basics
+    public class BasicConcepts
     {
         public void Variables()
         {

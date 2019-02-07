@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MyTemplates
 {
-    class Program
+    class Testing
     {
         static void Main(string[] args)
         {
